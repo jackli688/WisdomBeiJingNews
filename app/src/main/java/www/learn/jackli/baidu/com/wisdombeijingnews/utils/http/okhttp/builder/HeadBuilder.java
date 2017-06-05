@@ -1,0 +1,18 @@
+package www.learn.jackli.baidu.com.wisdombeijingnews.utils.http.okhttp.builder;
+
+
+import www.learn.jackli.baidu.com.wisdombeijingnews.utils.http.okhttp.OkHttpUtils;
+import www.learn.jackli.baidu.com.wisdombeijingnews.utils.http.okhttp.request.OtherRequest;
+import www.learn.jackli.baidu.com.wisdombeijingnews.utils.http.okhttp.request.RequestCall;
+
+/**
+ * Created by zhy on 16/3/2.
+ */
+public class HeadBuilder extends GetBuilder
+{
+    @Override
+    public RequestCall build()
+    {
+        return new OtherRequest(null, null, OkHttpUtils.METHOD.HEAD, url, tag, params, headers,id).build();
+    }
+}

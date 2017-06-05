@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import www.learn.jackli.baidu.com.wisdombeijingnews.Constant;
+import www.learn.jackli.baidu.com.wisdombeijingnews.constants.Constant;
 import www.learn.jackli.baidu.com.wisdombeijingnews.MyApplication;
 import www.learn.jackli.baidu.com.wisdombeijingnews.R;
 import www.learn.jackli.baidu.com.wisdombeijingnews.model.SystemBarTintManager;
@@ -57,7 +57,7 @@ public class GuideUI extends AppCompatActivity {
             getSupportActionBar().hide();
         }
         //将图片转换成ImageView提供给Adapter
-        int[] imgIds = new int[]{R.mipmap.guide_1, R.mipmap.guide_2, R.mipmap.guide_3};
+        int[] imgIds = new int[]{R.drawable.guide_1, R.drawable.guide_2, R.drawable.guide_3};
         imgs = new ArrayList<ImageView>();
         for (int i = 0; i < imgIds.length; i++) {
             ImageView imageView = new ImageView(MyApplication.getContext());
@@ -86,7 +86,7 @@ public class GuideUI extends AppCompatActivity {
         vpGuideBg.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                //当ViewPage华东的时候调用
+                //当ViewPage滑动的时候调用
                 LogUtil.i("position:" + position + ":positionOffset:"
                         + positionOffset + ":positionOffsetPixels:"
                         + positionOffsetPixels);
@@ -153,7 +153,7 @@ public class GuideUI extends AppCompatActivity {
     @OnClick(R.id.bt_guide_start)
     public void onViewClicked() {
         SPUtils.put(MyApplication.getContext(), Constant.IS_APP_FIRST_OPEN,false);
-        startActivity(new Intent(MyApplication.getContext(), MainUI.class));
+        startActivity(new Intent(MyApplication.getContext(), HomeActivity.class));
         finish();
     }
 

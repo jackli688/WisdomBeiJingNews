@@ -116,7 +116,6 @@ public class SPUtils {
 
     /**
      * 返回所有的键值对
-     *
      * @param context
      * @return
      */
@@ -136,7 +135,6 @@ public class SPUtils {
 
         /**
          * 反射查找apply的方法
-         *
          * @return
          */
         @SuppressWarnings({"unchecked", "rawtypes"})
